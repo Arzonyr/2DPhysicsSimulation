@@ -1,0 +1,537 @@
+fileFormatVersion: 2
+guid: 7c63ea562d668ea4db38d5ed0c8328e7
+timeCreated: 1523445692
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: slingshot_02_0
+    21300002: slingshot_02_1
+    21300004: slingshot_02_2
+    21300006: slingshot_02_3
+    21300008: slingshot_02_4
+    21300010: slingshot_02_5
+    21300012: slingshot_02_6
+    21300014: slingshot_02_7
+    21300016: slingshot_02_8
+    21300018: slingshot_02_9
+    21300020: slingshot_02_10
+    21300022: slingshot_02_11
+    21300024: slingshot_02_12
+    21300026: slingshot_02_13
+    21300028: slingshot_02_14
+    21300030: slingshot_02_15
+    21300032: slingshot_02_16
+    21300034: slingshot_02_17
+    21300036: slingshot_02_18
+    21300038: slingshot_02_19
+    21300040: slingshot_02_20
+    21300042: slingshot_02_21
+    21300044: slingshot_02_22
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.6634527, y: 0.85078055}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: slingshot_02_0
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_8
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_11
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_12
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_15
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_18
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_21
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: slingshot_02_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: 105, y: 208}
+      - {x: 63, y: 208}
+      - {x: 7, y: 37}
+      - {x: -18, y: 167}
+      - {x: -81, y: 192}
+      - {x: -87, y: 180}
+      - {x: -87, y: 103}
+      - {x: -60, y: 5}
+      - {x: -11, y: -87}
+      - {x: -34, y: -142}
+      - {x: -5, y: -202}
+      - {x: 52, y: -202}
+      - {x: 84, y: -125}
+      - {x: 109, y: 154}
+      - {x: 109, y: 207}
+    physicsShape:
+    - - {x: 67, y: -107}
+      - {x: 65, y: -93}
+      - {x: 62, y: -60}
+      - {x: 64, y: -34}
+      - {x: 66, y: -26}
+      - {x: 65, y: -19}
+      - {x: 72, y: -4}
+      - {x: 80, y: 14}
+      - {x: 81, y: 18}
+      - {x: 92, y: 55}
+      - {x: 95, y: 70}
+      - {x: 96, y: 81}
+      - {x: 100, y: 104}
+      - {x: 101, y: 113}
+      - {x: 104, y: 131}
+      - {x: 104, y: 158}
+      - {x: 106, y: 170}
+      - {x: 105, y: 181}
+      - {x: 108, y: 185}
+      - {x: 108, y: 194}
+      - {x: 103, y: 202}
+      - {x: 96, y: 207}
+      - {x: 76, y: 208}
+      - {x: 67, y: 199}
+      - {x: 63, y: 191}
+      - {x: 63, y: 182}
+      - {x: 65, y: 172}
+      - {x: 61, y: 136}
+      - {x: 58, y: 114}
+      - {x: 53, y: 98}
+      - {x: 49, y: 78}
+      - {x: 47, y: 67}
+      - {x: 41, y: 57}
+      - {x: 35, y: 43}
+      - {x: 27, y: 30}
+      - {x: 17, y: 19}
+      - {x: 4, y: 34}
+      - {x: -7, y: 49}
+      - {x: -16, y: 64}
+      - {x: -16, y: 68}
+      - {x: -21, y: 82}
+      - {x: -26, y: 101}
+      - {x: -29, y: 120}
+      - {x: -34, y: 137}
+      - {x: -32, y: 140}
+      - {x: -31, y: 146}
+      - {x: -34, y: 158}
+      - {x: -43, y: 170}
+      - {x: -62, y: 174}
+      - {x: -68, y: 174}
+      - {x: -76, y: 171}
+      - {x: -82, y: 168}
+      - {x: -86, y: 153}
+      - {x: -86, y: 148}
+      - {x: -83, y: 134}
+      - {x: -81, y: 118}
+      - {x: -77, y: 95}
+      - {x: -73, y: 74}
+      - {x: -65, y: 47}
+      - {x: -60, y: 33}
+      - {x: -35, y: -4}
+      - {x: -22, y: -19}
+      - {x: -15, y: -24}
+      - {x: -7, y: -38}
+      - {x: -4, y: -60}
+      - {x: -4, y: -74}
+      - {x: -8, y: -93}
+      - {x: -10, y: -122}
+      - {x: -11, y: -138}
+      - {x: -11, y: -157}
+      - {x: -9, y: -174}
+      - {x: -7, y: -185}
+      - {x: -5, y: -188}
+      - {x: 11, y: -198}
+      - {x: 14, y: -199}
+      - {x: 24, y: -199}
+      - {x: 40, y: -196}
+      - {x: 58, y: -177}
+      - {x: 65, y: -138}
+      - {x: 68, y: -132}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
