@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Projektile
   - Damager
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -40,9 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 75114657
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
