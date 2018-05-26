@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Projektile : MonoBehaviour
 {
@@ -15,6 +16,11 @@ public class Projektile : MonoBehaviour
     public float reloadTime;
     public float resetSpeed = 0.025f;
     public GameObject projektile;
+    public Text scoreText;
+    public int enemysInTotal;
+   
+    private int score = 0;
+    private int shotFired = 0;
     private float resetSpeedSqr;
     private Rigidbody2D shotRgdb;
     private SpringJoint2D spring;
@@ -48,6 +54,7 @@ public class Projektile : MonoBehaviour
     void Start()
     {
        
+     
         resetSpeedSqr = resetSpeed * resetSpeed;
         LineRendererSetup();
         rayToMouse = new Ray(catapultTrans.position, Vector3.zero);
@@ -57,6 +64,9 @@ public class Projektile : MonoBehaviour
     }
     void Update()
     {
+        if(shotFired>0)
+        ScoreCheck();
+    
         if (clickedOn)
             Dragging();
 
@@ -73,8 +83,12 @@ public class Projektile : MonoBehaviour
                 }
                 
                 Destroy(spring);
+               
+              
                 rigidbody2d.velocity = prevVelocity;
                 needToReload = true;
+                GetComponent<AudioSource>().Play();
+                shotFired++;
                // StartCoroutine(Reload());
                // if ( rigidbody2d.velocity.sqrMagnitude < resetSpeedSqr)
                 
@@ -96,7 +110,7 @@ public class Projektile : MonoBehaviour
             catapultLineBack.enabled = false;
         }
         
-        if (needToReload && rigidbody2d.velocity == new Vector2(0,0))
+        if (needToReload && rigidbody2d.velocity == new Vector2(0,0)||Input.GetKeyDown(KeyCode.R))
         {
             StartCoroutine(Reload());
         }
@@ -167,6 +181,12 @@ public class Projektile : MonoBehaviour
         Shot.SetActive(true);
         needToReload = false;
 
+    }
+    void ScoreCheck()
+    {
+        score = enemysInTotal * 10000 / shotFired;
+        scoreText.text = "Score: " + score;
+        
     }
     
 }

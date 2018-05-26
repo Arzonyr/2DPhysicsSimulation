@@ -20,11 +20,7 @@ public class Resetter : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Reset();
-        }
-
+        
        
     }
 
@@ -38,8 +34,5 @@ public class Resetter : MonoBehaviour
         }
     }
 
-    private void Reset()
-    {
-        SceneManager.LoadScene(0);
-    }
+   
 }

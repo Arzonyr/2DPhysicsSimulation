@@ -53,14 +53,18 @@
   <ItemGroup>
      <Compile Include="Assets\2D Explosion Force\script\ExplosionForce2D.cs" />
      <Compile Include="Assets\Scripts\BowAndArrow\Demo\BowDemoScript.cs" />
+     <Compile Include="Assets\Scripts\BowAndArrow\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\BowAndArrow\Script\BowScript.cs" />
      <Compile Include="Assets\Scripts\Enabler.cs" />
      <Compile Include="Assets\Scripts\EnemyDamage.cs" />
+     <Compile Include="Assets\Scripts\EnterNextLevel.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\PlankDamage.cs" />
      <Compile Include="Assets\Scripts\Portal.cs" />
      <Compile Include="Assets\Scripts\Projektile.cs" />
      <Compile Include="Assets\Scripts\Reloader.cs" />
      <Compile Include="Assets\Scripts\Resetter.cs" />
+     <Compile Include="Assets\Scripts\RotateNonInteractablePlank.cs" />
      <Compile Include="Assets\Scripts\StartGame.cs" />
      <None Include="Assets\Scripts\BowAndArrow\Readme.txt" />
  <Reference Include="UnityEngine.UI">

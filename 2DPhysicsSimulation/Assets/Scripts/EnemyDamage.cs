@@ -5,11 +5,11 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour {
 
 
-    public int health = 2;
+    public int health = 3;
     public Sprite damagedSprite;
     public float damageImpactSpeed;
     public GameObject Enemy;
-
+    private bool IsDead = false;
     private int currentHealth;
     private float damageImpactSpeedSqr;
     private SpriteRenderer spriteRenderer;
@@ -30,12 +30,22 @@ public class EnemyDamage : MonoBehaviour {
         if (collision.relativeVelocity.sqrMagnitude < damageImpactSpeedSqr)
             return;
 
+        
         health--;
-        if (health <= 0)
-            Kill();
+        if (health <= 1)
+            spriteRenderer.sprite = damagedSprite;
+
+        if (health <= 0 && IsDead == false)
+            StartCoroutine(Kill());
 	}
-    void Kill()
+    IEnumerator Kill()
     {
+        IsDead = true;
+        GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(1);
         Destroy(Enemy);
+       
+       
+       // Destroy(Enemy);
     }
 }
