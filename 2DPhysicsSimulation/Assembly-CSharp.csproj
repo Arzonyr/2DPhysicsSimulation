@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\PlankDamage.cs" />
      <Compile Include="Assets\Scripts\Portal.cs" />
      <Compile Include="Assets\Scripts\Projektile.cs" />
+     <Compile Include="Assets\Scripts\ProjektileV2.cs" />
      <Compile Include="Assets\Scripts\Reloader.cs" />
      <Compile Include="Assets\Scripts\Resetter.cs" />
      <Compile Include="Assets\Scripts\RotateNonInteractablePlank.cs" />

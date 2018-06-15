@@ -6,187 +6,85 @@ using UnityEngine.UI;
 
 public class Projektile : MonoBehaviour
 {
+    private bool dragging = false;
+    private Rigidbody2D rbd2D;
 
-    public float maxStretch = 3.0f;
-    public LineRenderer catapultLineFront;
-    public LineRenderer catapultLineBack;
-    public GameObject Shot;
-    public GameObject catapult;
-    public Transform spawnPositon;
-    public float reloadTime;
-    public float resetSpeed = 0.025f;
-    public GameObject projektile;
-    public Text scoreText;
-    public int enemysInTotal;
-   
-    private int score = 0;
-    private int shotFired = 0;
-    private float resetSpeedSqr;
-    private Rigidbody2D shotRgdb;
-    private SpringJoint2D spring;
-    private Transform catapultTrans;
-    private Ray rayToMouse;
-    private Ray leftCatapultToProjectile;
-    private float maxStretchSqr;
-    private float circleRadius;
-    private bool clickedOn;
-    private  Vector2 prevVelocity;
-    private Rigidbody2D rigidbody2d;
-    private CircleCollider2D circle;
-    private Vector2 prevShotVelocity;
-
-
-    private Transform lastposition = null;
-    bool needToReload = false;
-
-   
-    void OnEnable()
-    {
-        
-        spring = GetComponent<SpringJoint2D>();
-        rigidbody2d = GetComponent<Rigidbody2D>();
-        circle = GetComponent<CircleCollider2D>();
-       
-        catapultTrans = spring.connectedBody.transform;
-    }
+    public float SpeedModifier;
+    public float Boundaries;
+    public GameObject target;
+    public Camera MainCamera;
+    public LineRenderer leftArmLineRenderer;
+    public LineRenderer rightArmLineRenderer;
     
-
     void Start()
     {
-       
-     
-        resetSpeedSqr = resetSpeed * resetSpeed;
-        LineRendererSetup();
-        rayToMouse = new Ray(catapultTrans.position, Vector3.zero);
-        leftCatapultToProjectile = new Ray(catapultLineFront.transform.position, Vector3.zero);
-        maxStretchSqr = maxStretch * maxStretch;
-        circleRadius = circle.radius;
+        rbd2D = GetComponent<Rigidbody2D>();
+        EnableLineRenderer();
     }
+    void EnableLineRenderer()
+    {
+        leftArmLineRenderer.enabled = true;
+        rightArmLineRenderer.enabled = true;
+        leftArmLineRenderer.SetPosition(0, leftArmLineRenderer.gameObject.transform.position);
+        rightArmLineRenderer.SetPosition(0, rightArmLineRenderer.gameObject.transform.position);
+        leftArmLineRenderer.SetPosition(1, transform.position);
+        rightArmLineRenderer.SetPosition(1, transform.position);
+        
+    }
+    void DisableLineRenderer()
+    {
+        leftArmLineRenderer.enabled = false;
+        rightArmLineRenderer.enabled = false;
+    }
+    void UpdateLineRenderer()
+    {
+        leftArmLineRenderer.SetPosition(1, transform.position);
+        rightArmLineRenderer.SetPosition(1, transform.position);
+    }
+
+
     void Update()
     {
-        if(shotFired>0)
-        ScoreCheck();
-    
-        if (clickedOn)
-            Dragging();
+        UpdateLineRenderer();
+        if(dragging) UpdateBallPosition();
 
-        if (spring != null)
+
+        if(rbd2D.velocity == new Vector2(0,0) && dragging == false || Input.GetKeyDown(KeyCode.R))
         {
-            if (!rigidbody2d.isKinematic && prevVelocity.sqrMagnitude > rigidbody2d.velocity.sqrMagnitude)
-            {
-              //  if (neverdone)
-                {
-                    spring.enabled = !spring.enabled;
-                    catapultLineBack.enabled = !catapultLineBack.enabled;
-                    catapultLineFront.enabled = !catapultLineFront.enabled;
-                    needToReload = false;
-                }
-                
-                Destroy(spring);
-               
-              
-                rigidbody2d.velocity = prevVelocity;
-                needToReload = true;
-                GetComponent<AudioSource>().Play();
-                shotFired++;
-               // StartCoroutine(Reload());
-               // if ( rigidbody2d.velocity.sqrMagnitude < resetSpeedSqr)
-                
-
-               
-              
-
-
-                
-            }
-            if (!clickedOn)
-                prevVelocity = rigidbody2d.velocity;
-
-            LineRendererUpdate();
+            Reload();
         }
-        else
-        {
-            catapultLineFront.enabled = false;
-            catapultLineBack.enabled = false;
-        }
-        
-        if (needToReload && rigidbody2d.velocity == new Vector2(0,0)||Input.GetKeyDown(KeyCode.R))
-        {
-            StartCoroutine(Reload());
-        }
-        
     }
 
-    void LineRendererSetup()
+    private void UpdateBallPosition()
     {
-        catapultLineFront.SetPosition(0, catapultLineFront.transform.position);
-        catapultLineBack.SetPosition(0, catapultLineBack.transform.position);
-
-        catapultLineFront.sortingLayerName = "Default";
-        catapultLineBack.sortingLayerName = "Default";
-
-        catapultLineFront.sortingOrder = 3;
-        catapultLineBack.sortingOrder = 1;
+        Vector3 tempV3 = MainCamera.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 distanceVector = new Vector3(tempV3.x - target.transform.position.x, tempV3.y - target.transform.position.y, 0);
+        transform.position = target.transform.position + Vector3.ClampMagnitude(distanceVector, Boundaries);
     }
 
     void OnMouseDown()
     {
-        spring.enabled = false;
-        clickedOn = true;
+        dragging = true;
+    }
+     void OnMouseUp()
+    {
+        dragging = false;
+        DisableLineRenderer();
+        LaunchProjektil();
     }
 
-    void OnMouseUp()
+    private void LaunchProjektil()
     {
-        spring.enabled = true;
-        rigidbody2d.isKinematic = false;
-        clickedOn = false;
+        rbd2D.isKinematic = false;
+        rbd2D.velocity = new Vector3(target.transform.position.x - transform.position.x, target.transform.position.y - transform.position.y, 0) * SpeedModifier;
     }
-
-    void Dragging()
+    void Reload()
     {
-        Vector3 mouseWorldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 catapultToMouse = mouseWorldPoint - catapultTrans.position;
-        if (catapultToMouse.sqrMagnitude > maxStretchSqr)
-        {
-            rayToMouse.direction = catapultToMouse;
-            mouseWorldPoint = rayToMouse.GetPoint(maxStretch);
-        }
-        mouseWorldPoint.z = 0f;
-        transform.position = mouseWorldPoint;
-    }
-
-    void LineRendererUpdate()
-    {
-        Vector2 catapultToProjectile = transform.position - catapultLineFront.transform.position;
-        leftCatapultToProjectile.direction = catapultToProjectile;
-        Vector3 holdPoint = leftCatapultToProjectile.GetPoint(catapultToProjectile.magnitude + circleRadius);
-        catapultLineFront.SetPosition(1, holdPoint);
-        catapultLineBack.SetPosition(1, holdPoint);
-    }
-     IEnumerator Reload()
-    {
-        yield return new WaitForSeconds(reloadTime);
-        Shot.SetActive(false);
-        Shot.transform.position = spawnPositon.position;
-        shotRgdb = GetComponent<Rigidbody2D>();
-        shotRgdb.isKinematic = true;
-        SpringJoint2D sj = Shot.AddComponent(typeof(SpringJoint2D)) as SpringJoint2D;
-        spring = GetComponent<SpringJoint2D>();
-        spring.connectedBody = catapult.GetComponent<Rigidbody2D>();
-        spring.autoConfigureDistance = false;
-        spring.distance = 1f;
-        spring.frequency = 5f;
-        catapultLineBack.enabled = true;
-        catapultLineFront.enabled = true;
-        Shot.SetActive(true);
-        needToReload = false;
+        rbd2D.velocity = new Vector2(0, 0);
+        rbd2D.angularVelocity = 0f;
+        rbd2D.isKinematic = true;
+        transform.position = target.transform.position;
+        EnableLineRenderer();
 
     }
-    void ScoreCheck()
-    {
-        score = enemysInTotal * 10000 / shotFired;
-        scoreText.text = "Score: " + score;
-        
-    }
-    
 }
